@@ -1,12 +1,16 @@
 import clearMain from "../utils/clearMain.js";
 import getDataPrefix from "../utils/getDataPrefix.js";
-import getHeadingFromLink from "../utils/getHeadingFromLink.js";
 import getSection from "../utils/getSection.js";
 import secureLinks from "../utils/secureLinks.js";
 import { setup, undefinedValues } from "/setup.js";
 
 export default function displayItem(link, tab) {
   clearMain();
+
+  if (document.querySelector(".active")) {
+    document.querySelector(".active").classList.remove("active");
+    document.getElementById(tab).classList.add("active");
+  }
 
   fetch(secureLinks(link))
     .then(res => res.json())
