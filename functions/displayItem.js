@@ -32,7 +32,11 @@ export default function displayItem(link, tab) {
         } else if (!undefinedValues.includes(value)) {
           dataStr += `
 					<p>
-						<span class="capitalize">${getDataPrefix(dataKey)}: </span>${value}
+						<span class="capitalize">${getDataPrefix(dataKey)}: </span>${
+            value.toString().startsWith("http")
+              ? `<span class="link" url=${value}>${value}</span>`
+              : value
+          }
 					</p>
 				`;
         }
