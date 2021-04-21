@@ -9,6 +9,6 @@ export default function menuClick(e) {
   fetch(secureLinks(e.target.dataset.url))
     .then(res => res.json())
     .then(data => {
-      showData(data);
+      showData(data, e.target.innerHTML);
     });
 }
