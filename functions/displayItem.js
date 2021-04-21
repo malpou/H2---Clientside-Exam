@@ -33,7 +33,12 @@ export default function displayItem(link, tab) {
             </p>
             `;
           }
-        } else if (!undefinedValues.includes(value)) {
+        } else if (
+          !undefinedValues.includes(value) &&
+          value !== undefined &&
+          value !== null
+        ) {
+          console.log(value);
           dataStr += `
 					<p>
 						<span class="capitalize">${getDataPrefix(dataKey)}: </span>${
