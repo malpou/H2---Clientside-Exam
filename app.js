@@ -1,4 +1,4 @@
-import { createMenu } from "./functions/createMenu.js";
+import createMenu from "./functions/createMenu.js";
 import secureLinks from "../utils/secureLinks.js";
 
 const swapi = "https://swapi.dev/api/";

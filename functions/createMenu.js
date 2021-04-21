@@ -1,6 +1,6 @@
 import menuClick from "./menuClick.js";
 
-export function createMenu(data) {
+export default function createMenu(data) {
   const navBar = document.querySelector("#navBar");
   for (const key in data) {
     const menuItem = document.createElement("div");

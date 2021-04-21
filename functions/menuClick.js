@@ -1,5 +1,5 @@
 import secureLinks from "../utils/secureLinks.js";
-import { showData } from "./showData.js";
+import showData from "./showData.js";
 
 export default function menuClick(e) {
   if (document.querySelector(".active")) {
